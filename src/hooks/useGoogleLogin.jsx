@@ -2,6 +2,7 @@ import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { auth } from "../firebase/firebaseConfig";
 
 import { useGlobalContext } from "./useGlobalContex";
+import toast from "react-hot-toast";
 
 export const useGoogleLogin = () => {
   const { dispatch } = useGlobalContext();
@@ -12,9 +13,8 @@ export const useGoogleLogin = () => {
     try {
       const userCredential = await signInWithPopup(auth, provider);
       const user = userCredential.user;
-
+      toast.success("Xush kelibsiz 🎉");
       dispatch({ type: "LOGIN", payload: user });
-      console.log(user);
     } catch (error) {
       console.error("Google login error:", error);
     }
