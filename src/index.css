@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+body,
+html,
+#root {
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  font-family: var(--font-poppins);
+  color: var(--color-black);
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./assets/fonts/Poppins-SemiBold.woff2") format("woff2"),
+    url("./assets/fonts/Poppins-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./assets/fonts/Poppins-Medium.woff2") format("woff2"),
+    url("./assets/fonts/Poppins-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poly";
+  src: url("./assets/fonts/Poly-Regular.woff2") format("woff2"),
+    url("./assets/fonts/Poly-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./assets/fonts/Poppins-Regular.woff2") format("woff2"),
+    url("./assets/fonts/Poppins-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./assets/fonts/Poppins-Bold.woff2") format("woff2"),
+    url("./assets/fonts/Poppins-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-poppins: "Poppins", sans-serif;
+  --font-poly: "Poly", sans-serif;
+
+  --color-black: #212121;
+  --color-gray-light: #757575;
+}
