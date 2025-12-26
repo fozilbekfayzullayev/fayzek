@@ -1,3 +1,27 @@
-.register__image {
-  background-image: url("./assets/image/register.jpg");
+.hero svg path {
+  fill: transparent;
+  stroke: #fff;
+  stroke-width: 0.5;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: textAnimation 4s ease-in-out 1 forwards;
+}
+
+@keyframes textAnimation {
+  0% {
+    stroke-dashoffset: 500;
+  }
+  50% {
+    fill: transparent;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: #fff;
+  }
+}
+
+.about {
+  background: url("./assets/image/bg.avif");
+  background-color: #09080a;
+  background-size: contain;
 }

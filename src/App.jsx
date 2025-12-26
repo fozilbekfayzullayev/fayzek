@@ -4,8 +4,11 @@ import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage.jsx";
 import RegisterPage from "./pages/RegisterPage.jsx";
 import ProtectedRoute from "./components/ProtectedRoute.jsx";
+import GalleryPage from "./pages/GalleryPage.jsx";
 
 import { useGlobalContext } from "./hooks/useGlobalContex.jsx";
+
+import "./App.css";
 
 const App = () => {
   const { user, authReady } = useGlobalContext();
@@ -21,6 +24,10 @@ const App = () => {
         {
           index: true,
           element: <HomePage />,
+        },
+        {
+          path: "gallery",
+          element: <GalleryPage />,
         },
       ],
     },

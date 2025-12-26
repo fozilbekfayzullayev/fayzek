@@ -111,7 +111,13 @@ const RegisterForm = () => {
 
   return (
     <div className="container max-w-md mx-auto p-4 relative h-full shadow-lg md:shadow-none rounded-lg">
-      <Toaster position="top-right" reverseOrder={true} />
+      <Toaster
+        position="top-right"
+        reverseOrder={true}
+        toastOptions={{
+          className: "text-sm",
+        }}
+      />
       <div className="px-8 pt-6 pb-8 mb-4 mt-12">
         <h2 className="text-4xl font-bold text-center font-poly mb-2">
           Ro'yxatdan o'tish

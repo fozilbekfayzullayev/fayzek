@@ -1,30 +1,19 @@
-import { Link, NavLink, Outlet } from "react-router";
+import { Outlet } from "react-router";
+import { Toaster } from "react-hot-toast";
 
-import { useGlobalContext } from "../hooks/useGlobalContex";
-
-import { useLogout } from "../hooks/useLogout";
+import CustomCursor from "../components/CustomCursor";
 
 const MainLayout = () => {
-  const { user } = useGlobalContext();
-  const { logout } = useLogout();
   return (
     <>
-      <header className="bg-stone-900 text-white p-4 flex justify-around items-center">
-        <h1 className="text-xl font-bold">
-          <Link to="/">My App</Link>
-        </h1>
-        {!user ? (
-          <div className="space-x-4">
-            <NavLink to={"/login"}>Login</NavLink>
-            <NavLink to={"/register"}>Register</NavLink>
-          </div>
-        ) : (
-          <button className="cursor-pointer" onClick={logout}>
-            Logout
-          </button>
-        )}
-      </header>
-      <main className="p-4">
+      <CustomCursor />
+
+      <main>
+        <Toaster
+          toastOptions={{
+            className: "text-sm",
+          }}
+        />
         <Outlet />
       </main>
     </>

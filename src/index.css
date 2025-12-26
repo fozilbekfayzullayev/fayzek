@@ -10,6 +10,19 @@ html,
   color: var(--color-black);
 }
 
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+.home {
+  cursor: none !important;
+}
+
+main {
+  flex: 1;
+}
+
 @font-face {
   font-family: "Poppins";
   src: url("./assets/fonts/Poppins-SemiBold.woff2") format("woff2"),
@@ -61,4 +74,18 @@ html,
 
   --color-black: #212121;
   --color-gray-light: #757575;
+  --color-white-custom: #f4f8fb;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(134, 133, 133, 0.2);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(91, 91, 91);
+  border-radius: 5px;
 }
