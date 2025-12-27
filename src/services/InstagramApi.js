@@ -1,5 +1,5 @@
 // src/services/instagramApi.js
-const API_BASE_URL = "http://localhost:3000/api/instagram";
+const API_BASE_URL = "https://insta-backend-1j63.onrender.com/api/instagram";
 
 // Barcha rasmlarni olish
 export const fetchInstagramPhotos = async (maxPhotos = 1000) => {
