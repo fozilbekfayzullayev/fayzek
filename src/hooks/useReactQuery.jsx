@@ -5,7 +5,7 @@ import {
   fetchInstagramPosts,
   fetchInstagramPost,
   fetchLimitedPosts,
-} from "../services/instagramApi";
+} from "../services/InstagramApi";
 
 // 1. Rasmlarni olish
 export const useInstagramPhotos = (maxPhotos = 1000, options = {}) => {
